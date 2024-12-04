@@ -15,7 +15,7 @@ int main() {
 
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> dis(1, 2);
+    uniform_int_distribution<> dis(1, 25);
 
     for (int i = 0; i < *size_m; i++) {
         A[i] = dis(gen);
