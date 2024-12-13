@@ -23,7 +23,31 @@ int main() {
 	int* choice = new int;
 	cin >> *choice;
 
-
+	if (*choice == 1) {
+		for (int i = 0; i < *size_m; i++) {
+			if (A[i] % 2 != 0) {
+				for (int j = i; j < *size_m - 1; j++) {
+					A[j] = A[j + 1];
+				}
+				*size_m -= 1;
+				i--;
+			}
+		}						
+	}
+	else if (*choice == 2) {
+		for (int i = 0; i < *size_m; i++) {
+			if (A[i] % 2 == 0) {
+				for (int j = i; j < *size_m - 1; j++) {
+					A[j] = A[j + 1];
+				}
+				*size_m -= 1;
+				i--;
+			}
+		}
+	}
+	else {
+		cout << "Invalid choice!";
+	}
 
 
     delete size_m;
